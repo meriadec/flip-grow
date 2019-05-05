@@ -24,7 +24,7 @@ export const SpinnerCircle = () => (
 
 export default () => (
   <SpinnerIcons>
-    <Abs>
+    <Abs sticky>
       <div
         style={{
           border: "3px solid hsl(0, 0%, 22%, 0.4)",
@@ -35,12 +35,12 @@ export default () => (
         }}
       />
     </Abs>
-    <Abs>
+    <Abs sticky>
       <Rotating speed={1}>
         <FaCircleNotch color="hsl(0, 0%, 35%)" size={50} />
       </Rotating>
     </Abs>
-    <Abs>
+    <Abs sticky>
       <Rotating speed={7}>
         <FaSpinner color="hsl(0, 0%, 55%)" size={25} />
       </Rotating>

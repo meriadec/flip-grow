@@ -6,15 +6,13 @@ import styled from "styled-components";
 type Props = {
   value: boolean,
   onChange: () => void,
-  children: React$Node
 };
 
 export default function Switch(props: Props) {
-  const { value, onChange, children } = props;
+  const { value, onChange } = props;
   return (
     <StyledSwitch onClick={() => onChange(!value)}>
       <StyledSwitchBar isChecked={value} />
-      <div style={{ flexGrow: 1 }}>{children}</div>
     </StyledSwitch>
   );
 }
@@ -23,10 +21,11 @@ const StyledSwitch = styled.div.attrs({ tabIndex: 0 })`
   display: flex;
   align-items: center;
   user-select: none;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 2px;
+  background: hsl(0, 0%, 27%);
   &:hover {
-    background-color: hsl(0, 0%, 0%, 0.05);
+    background-color: hsl(0, 0%, 30%);
   }
 `;
 
@@ -36,7 +35,6 @@ const StyledSwitchBar = styled.div`
   width: 40px;
   height: 20px;
   border-radius: 10px;
-  margin-right: 10px;
   border: 1px solid ${p => (p.isChecked ? "hsl(146, 30%, 40%)" : "transparent")};
 
   &:after {

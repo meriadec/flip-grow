@@ -87,7 +87,7 @@ export const Content = ({
 export const Loader = (p: *) => (
   <StyledLoader {...p}>
     <Spinner />
-    <Abs top={80}>
+    <Abs bottom={20}>
       <LoaderText>Loading...</LoaderText>
     </Abs>
   </StyledLoader>
@@ -96,7 +96,7 @@ export const Loader = (p: *) => (
 const LoaderText = styled.div`
   text-transform: uppercase;
   font-weight: bold;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 11px;
   color: hsl(0, 0%, 40%);
   background: hsl(0, 0%, 25%);

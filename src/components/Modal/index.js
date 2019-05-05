@@ -79,7 +79,7 @@ export default props => {
   return createPortal(
     <>
       <Backdrop style={backdropStyle} />
-      <Scroller pointerEvents={isOpened} gutter={40} onBackClick={close}>
+      <Scroller pointerEvents={isOpened} gutter={60} onBackClick={close}>
         <Dialog
           pointerEvents={isOpened}
           contentOpacity={anims.contentOpacity}

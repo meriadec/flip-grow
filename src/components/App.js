@@ -2,11 +2,15 @@ import { hot } from "react-hot-loader";
 import React, { useState, useCallback } from "react";
 import { FaExchangeAlt, FaEye } from "react-icons/fa";
 
-import { useGlobalAnimations, useSetGlobalAnimations } from "../hooks/globalAnimations";
+import {
+  useGlobalAnimations,
+  useSetGlobalAnimations
+} from "../hooks/globalAnimations";
 import GlobalStyle from "./GlobalStyle";
 import ModalsContainer from "./ModalsContainer";
 import Card from "./Card";
 import Spaced from "./Spaced";
+import Abs from "./Abs";
 import Button from "./Button";
 import Switch from "./Switch";
 
@@ -42,8 +46,8 @@ const App = () => {
     [setOpenedModal]
   );
 
-  const globalAnimationsEnabled =  useGlobalAnimations();
-  const setGlobalAnimations = useSetGlobalAnimations()
+  const globalAnimationsEnabled = useGlobalAnimations();
+  const setGlobalAnimations = useSetGlobalAnimations();
 
   return (
     <>
@@ -58,8 +62,13 @@ const App = () => {
           HeaderComponent={HeaderComponent}
           ContentComponent={ContentComponent}
         />
-        <Switch value={globalAnimationsEnabled} onChange={setGlobalAnimations}>Enable animations</Switch>
       </Spaced>
+      <Abs top={10} right={10} z={20}>
+        <Switch
+          value={globalAnimationsEnabled}
+          onChange={setGlobalAnimations}
+        />
+      </Abs>
     </>
   );
 };

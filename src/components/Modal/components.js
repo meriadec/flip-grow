@@ -214,7 +214,6 @@ const ScrollerLevel2 = styled.div`
   flex-direction: column;
   flex-shrink: 1;
   min-height: 0;
-  pointer-events: none;
 `;
 
 const ScrollerLevel3 = styled(Animated.div)`

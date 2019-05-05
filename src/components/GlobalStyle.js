@@ -9,7 +9,6 @@ export default createGlobalStyle`
     background: transparent;
     border: none;
     font: inherit;
-    // outline: none;
   }
 
   body {

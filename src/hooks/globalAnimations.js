@@ -14,7 +14,7 @@ export function useSetGlobalAnimations() {
 }
 
 function GlobalAnimationsProvider({ children }: { children: React$Node }) {
-  const [isEnabled, setEnabled] = useState<boolean>(true);
+  const [isEnabled, setEnabled] = useState<boolean>(false);
   return (
     <GlobalsAnimationsEnabled.Provider value={isEnabled}>
       <SetGlobalsAnimations.Provider value={setEnabled}>

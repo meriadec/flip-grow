@@ -1,6 +1,6 @@
 // @flow
 
-import React, { memo } from "react";
+import React from "react";
 import styled from "styled-components";
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   FooterComponent: React$ComponentType<*>
 };
 
-export default memo<Props>(function Card(props: Props) {
+export default function Card(props: Props) {
   const { HeaderComponent, ContentComponent, FooterComponent } = props;
   return (
     <StyledCard>
@@ -21,14 +21,10 @@ export default memo<Props>(function Card(props: Props) {
       <StyledCardContent>
         <ContentComponent />
       </StyledCardContent>
-      {FooterComponent && (
-        <StyledCardFooter>
-          <FooterComponent />
-        </StyledCardFooter>
-      )}
+      <FooterComponent />
     </StyledCard>
   );
-});
+}
 
 const StyledCard = styled.div`
   flex-grow: 1;
@@ -36,7 +32,6 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 2px;
-  overflow: hidden;
   border: 2px solid hsl(0, 0%, 24%);
 `;
 
@@ -66,8 +61,7 @@ const StyledCardContent = styled.div`
 
 const StyledCardFooter = styled.div`
   min-height: 64px;
-  background: hsl(0, 0%, 18%);
-  color: hsl(0, 0%, 35%);
+  background: hsl(0, 0%, 26%);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   padding: 16px;

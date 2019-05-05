@@ -37,7 +37,7 @@ export default () => (
     </Abs>
     <Abs sticky>
       <Rotating speed={1}>
-        <FaCircleNotch color="hsl(0, 0%, 35%)" size={50} />
+        <FaCircleNotch color="hsl(190, 0%, 35%)" size={50} />
       </Rotating>
     </Abs>
     <Abs sticky>

@@ -16,13 +16,12 @@ export default createGlobalStyle`
     font-family: sans-serif;
     padding: 0;
     margin: 0;
-    color: #bbb;
+    color: #aeaeae;
     font-size: 16px;
     line-height: 24px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 20px;
+    margin-top: 80px;
   }
 
   svg {

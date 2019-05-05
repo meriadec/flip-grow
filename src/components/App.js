@@ -13,8 +13,25 @@ import Spaced from "./Spaced";
 import Abs from "./Abs";
 import Button from "./Button";
 import Switch from "./Switch";
+import Logo from "./Logo";
 
 const HeaderComponent = () => "Ledger Swag";
+
+const FooterComponent = () => {
+  const globalAnimationsEnabled = useGlobalAnimations();
+  const setGlobalAnimations = useSetGlobalAnimations();
+  return (
+    <>
+      <Switch
+        value={globalAnimationsEnabled}
+        onChange={setGlobalAnimations}
+        label="Enable animations"
+      />
+      <Switch value={false} onChange={() => {}} label="Record APDUs" isFake />
+      <Switch value={false} onChange={() => {}} label="Use cache" isFake />
+    </>
+  );
+};
 
 const App = () => {
   const [openedModal, setOpenedModal] = useState(null);
@@ -46,9 +63,6 @@ const App = () => {
     [setOpenedModal]
   );
 
-  const globalAnimationsEnabled = useGlobalAnimations();
-  const setGlobalAnimations = useSetGlobalAnimations();
-
   return (
     <>
       <GlobalStyle />
@@ -59,16 +73,10 @@ const App = () => {
       />
       <Spaced of={20}>
         <Card
-          HeaderComponent={HeaderComponent}
           ContentComponent={ContentComponent}
+          FooterComponent={FooterComponent}
         />
       </Spaced>
-      <Abs top={10} right={10} z={20}>
-        <Switch
-          value={globalAnimationsEnabled}
-          onChange={setGlobalAnimations}
-        />
-      </Abs>
     </>
   );
 };

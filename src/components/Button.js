@@ -8,7 +8,7 @@ const StyledButton = styled.div.attrs({
 })`
   display: inline-flex;
   user-select: none;
-  height: 40px;
+  height: 48px;
   align-items: center;
   padding-left: 16px;
   padding-right: 16px;

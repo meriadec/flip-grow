@@ -223,7 +223,7 @@ const ScrollerLevel3 = styled(Animated.div)`
 `;
 
 export const Backdrop = styled(p => <Fixed as={Animated.div} {...p} />)`
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   pointer-events: none;
 `;
 

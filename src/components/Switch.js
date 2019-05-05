@@ -6,7 +6,8 @@ import styled from "styled-components";
 type Props = {
   value: boolean,
   label?: React$Node,
-  onChange: boolean => void
+  onChange: boolean => void,
+  isFake?: boolean,
 };
 
 export default function Switch(props: Props) {

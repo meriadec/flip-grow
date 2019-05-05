@@ -116,9 +116,9 @@ const SubTitle = styled.div`
   font-size: 13px;
   text-align: right;
   margin-bottom: 20px;
-  color: hsl(400, 20%, 50%);
+  color: hsl(400, 10%, 50%);
   font-weight: bold;
   letter-spacing: 1px;
-  border-bottom: 2px solid hsl(400, 10%, 30%);
+  border-bottom: 2px solid hsl(0, 0%, 22%);
   user-select: none;
 `;

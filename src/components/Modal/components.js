@@ -131,7 +131,7 @@ export const Fixed = styled.div`
 class ErrorBoundary extends React.Component<
   {
     onClose: () => void,
-    children: React$Node
+    children: *,
   },
   {
     err: ?Error
@@ -257,6 +257,7 @@ const StyledDialogBase = styled(({ pointerEvents, ...p }) => (
 ))`
   border-radius: 2px;
   background: hsl(0, 0%, 27%);
+  background: hsl(0, ${p => p.sat || 0}%, 26%);
   box-shadow: hsla(0, 0%, 0%, 0.2) 0 12px 30px;
   border: 2px solid hsl(0, 0%, 35%);
   overflow: hidden;

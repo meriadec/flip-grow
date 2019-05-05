@@ -10,12 +10,8 @@ import GlobalStyle from "./GlobalStyle";
 import ModalsContainer from "./ModalsContainer";
 import Card from "./Card";
 import Spaced from "./Spaced";
-import Abs from "./Abs";
 import Button from "./Button";
 import Switch from "./Switch";
-import Logo from "./Logo";
-
-const HeaderComponent = () => "Ledger Swag";
 
 const FooterComponent = () => {
   const globalAnimationsEnabled = useGlobalAnimations();

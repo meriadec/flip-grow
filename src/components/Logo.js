@@ -1,6 +1,8 @@
+// @flow
+
 import React from "react";
 
-export default ({ color, size }) => (
+export default ({ color, size }: { color: string, size: number }) => (
   <svg
     width={size}
     height={size}

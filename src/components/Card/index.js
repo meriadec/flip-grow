@@ -58,15 +58,3 @@ const StyledCardContent = styled.div`
   flex-grow: 1;
   padding: 32px;
 `;
-
-const StyledCardFooter = styled.div`
-  min-height: 64px;
-  background: hsl(0, 0%, 26%);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  padding: 16px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  user-select: none;
-`;

@@ -197,7 +197,7 @@ export const Scroller = ({
   </ScrollerLevel1>
 );
 
-const ScrollerLevel1 = styled(({ pointerEvents, ...p }) => <Fixed {...p} />)`
+const ScrollerLevel1 = styled(p => <Fixed {...p} />)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,7 +252,7 @@ const StyledClose = styled.div.attrs({
   }
 `;
 
-const StyledDialogBase = styled(({ pointerEvents, ...p }) => (
+const StyledDialogBase = styled(p => (
   <Animated.div {...p} />
 ))`
   border-radius: 2px;

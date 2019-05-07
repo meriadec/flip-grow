@@ -25,6 +25,8 @@ export default props => {
     () => {
       let listener;
 
+      document.body.style.overflow = isOpened ? 'hidden' : 'initial'
+
       // animate enter
       if (isOpened && !isInDOM) {
         lastFocused.current = document.activeElement;
